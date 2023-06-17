@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>SalaryCalculator</display-name>
+  
+  <servlet>
+  	<servlet-name>Salary</servlet-name>
+  	<servlet-class>InsertRecord</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Salary</servlet-name>
+  	<url-pattern>/enter</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>Views</servlet-name>
+  	<servlet-class>ViewSalary</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Views</servlet-name>
+  	<url-pattern>/views</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+  	<servlet-name>Register</servlet-name>
+  	<servlet-class>RegisterUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Register</servlet-name>
+  	<url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>Modify1</servlet-name>
+  	<servlet-class>ModifyUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Modify1</servlet-name>
+  	<url-pattern>/modify</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>Modify2</servlet-name>
+  	<servlet-class>ModifyUser2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Modify2</servlet-name>
+  	<url-pattern>/modify2</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>Delete</servlet-name>
+  	<servlet-class>DeleteUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Delete</servlet-name>
+  	<url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+ 	<servlet-name>JSP</servlet-name>
+ 	<jsp-file>/Salary.jsp</jsp-file>
+ 	</servlet>
+ 	<servlet-mapping>
+ 		<servlet-name>JSP</servlet-name>
+ 		<url-pattern>/currency</url-pattern>
+ 	</servlet-mapping>
+ 	
+ 	<error-page>
+  		<exception-type>java.lang.Exception</exception-type>
+  		<location>/errorpage.jsp</location>
+  	</error-page>
+  	
+  	<error-page>
+  		<exception-type>java.lang.NumberFormatException</exception-type>
+  		<location>/errorpage2.jsp</location>
+  	</error-page>
+  	
+  	
+  
+</web-app>
